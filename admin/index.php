@@ -18,36 +18,9 @@
                        
                        
                         <h1 class="page-header">
-                            Welcome to admin
-                            
-                            
-                            <small> <?php 
-
+                            Welcome to Admin<small> <?php 
                             if(isset($_SESSION['username'])) {
-
-                            echo $_SESSION['username'];
-
-
-
-
-                            }
-
-
-                            // if(is_admin($_SESSION['username'])){
-
-                            //     echo " -- is admin too";
-
-                            // } else {
-
-                            //     echo " ---is not";
-
-                            // }
-
-
-
-
-
-                            ?></small>
+                            echo $_SESSION['username'];}?></small>
                         </h1>
 
 
@@ -240,7 +213,7 @@ $subscriber_count = mysqli_num_rows($select_all_subscribers);
     $element_count = [$post_count,$post_published_count, $post_draft_count, $comment_count,$unapproved_comment_count, $user_count,$subscriber_count,$category_count];
 
 
-    for($i =0;$i < 8; $i++) {
+    for($i =0;$i < sizeof($element_text); $i++) {
     
         echo "['{$element_text[$i]}'" . "," . "{$element_count[$i]}],";
      

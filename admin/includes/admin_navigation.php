@@ -25,29 +25,17 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
                     
 <?php
-
 if(isset($_SESSION['username'])) {
-
-    
-    echo $_SESSION['username'];
-
-
+    echo $_SESSION['username'];    
 }
-
-
-
-
 ?>
                                     
                     
                     
                     <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li>
-                           
-                           
-                           
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        <li>                         
+                            <a href="profile.php"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -67,13 +55,13 @@ if(isset($_SESSION['username'])) {
                     </li>
                 
                      <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Posts <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Campaigns <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="posts_dropdown" class="collapse">
                             <li>
-                                <a href="./posts.php"> View All Posts</a>
+                                <a href="./posts.php"> View All Campaigns</a>
                             </li>
                             <li>
-                                <a href="posts.php?source=add_post">Add Posts</a>
+                                <a href="posts.php?source=add_post">Add Campaigns</a>
                             </li>
                         </ul>
                     </li>

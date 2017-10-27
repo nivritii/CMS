@@ -50,11 +50,7 @@ switch($source) {
     
     include "includes/edit_post.php";
     break;
-    
-    case '200';
-    echo "NICE 200";
-    break;
-    
+
     default:
     
     include "includes/view_all_comments.php";

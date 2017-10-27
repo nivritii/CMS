@@ -3,26 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/cms/admin/js/tiny-local-copy.js</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/js/scripts.js</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/index.php</file>
-            <file>file:/C:/xampp/htdocs/cms/includes/db.php</file>
-            <file>file:/C:/xampp/htdocs/cms/index.php</file>
-            <file>file:/C:/xampp/htdocs/cms/user/profile.php</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/includes/edit_user.php</file>
-            <file>file:/C:/xampp/htdocs/cms/includes/sidebar.php</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/includes/admin_navigation.php</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/profile.php</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/posts.php</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/includes/admin_header.php</file>
-            <file>file:/C:/xampp/htdocs/cms/registration.php</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/functions.php</file>
-            <file>file:/C:/xampp/htdocs/cms/includes/widget.php</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/includes/edit_post.php</file>
-            <file>file:/C:/xampp/htdocs/cms/login.php</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/users.php</file>
-            <file>file:/C:/xampp/htdocs/cms/post.php</file>
-            <file>file:/C:/xampp/htdocs/cms/admin/includes/add_user.php</file>
+            <file>file:/C:/xampp/htdocs/cms/user/includes/view_all_user_posts.php</file>
+            <file>file:/C:/xampp/htdocs/cms/user/includes/user_header.php</file>
+            <file>file:/C:/xampp/htdocs/cms/user/posts.php</file>
+            <file>file:/C:/xampp/htdocs/cms/user/includes/user_add_post.php</file>
+            <file>file:/C:/xampp/htdocs/cms/user/index.php</file>
         </group>
     </open-files>
 </project-private>

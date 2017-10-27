@@ -17,37 +17,18 @@
 <!--                <li><a href="">Users Online: <span class="usersonline"></span></a></li>-->
 
                <li><a href="../index.php">HOME SITE</a></li>
-               
-               
-               
-    
-                <li class="dropdown">
+               <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
                     
 <?php
-
 if(isset($_SESSION['username'])) {
-
-    
     echo $_SESSION['username'];
-
-
 }
-
-
-
-
-?>
-                                    
-                    
-                    
+?>                   
                     <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li>
-                           
-                           
-                           
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        <li>                           
+                            <a href="profile.php"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -62,12 +43,12 @@ if(isset($_SESSION['username'])) {
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-<!--                    <li>
+                    <li>
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                 
                      <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Posts <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Campaigns <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="posts_dropdown" class="collapse">
                             <li>
                                 <a href="./posts.php"> View My Campaigns</a>
@@ -76,12 +57,9 @@ if(isset($_SESSION['username'])) {
                                 <a href="posts.php?source=add_post">Create a Campaign</a>
                             </li>
                         </ul>
-                    </li>-->
-                    <li>
-                        <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i>View My Campaigns</a>
                     </li>
                     <li class="">
-                        <a href="comments.php"><i class="fa fa-fw fa-file"></i>Create a Campaign</a>
+                        <a href="comments.php"><i class="fa fa-fw fa-file"></i>Comments</a>
                     </li>
                     
 <!--                    <li>

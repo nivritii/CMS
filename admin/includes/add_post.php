@@ -47,7 +47,7 @@
      
      
       <div class="form-group">
-         <label for="title">Post Title</label>
+         <label for="title">Campaign Title</label>
           <input type="text" class="form-control" name="title">
       </div>
 

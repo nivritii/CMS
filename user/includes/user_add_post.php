@@ -5,9 +5,9 @@
    if(isset($_POST['create_post'])) {
    
             $post_title        = escape($_POST['title']);
-            $post_user         = escape($_POST['post_user']);
+            $post_user         = escape($_SESSION['username']);
             $post_category_id  = escape($_POST['post_category']);
-            $post_status       = escape($_POST['post_status']);
+            $post_status       = "draft";
     
             $post_image        = escape($_FILES['image']['name']);
             $post_image_temp   = escape($_FILES['image']['tmp_name']);
@@ -30,24 +30,15 @@
       confirmQuery($create_post_query);
 
       $the_post_id = mysqli_insert_id($connection);
-
-
       echo "<p class='bg-success'>Post Created. <a href='../post.php?p_id={$the_post_id}'>View Post </a> or <a href='posts.php'>Edit More Posts</a></p>";
-       
-
-
-   }
-    
-
-    
-    
+}
 ?>
 
     <form action="" method="post" enctype="multipart/form-data">    
      
      
       <div class="form-group">
-         <label for="title">Post Title</label>
+         <label for="title">Campaign Title</label>
           <input type="text" class="form-control" name="title">
       </div>
 
@@ -63,14 +54,10 @@
         confirmQuery($select_categories);
 
 
-        while($row = mysqli_fetch_assoc($select_categories )) {
+        while($row = mysqli_fetch_assoc($select_categories)) {
         $cat_id = $row['cat_id'];
         $cat_title = $row['cat_title'];
-            
-            
-            echo "<option value='$cat_id'>{$cat_title}</option>";
-         
-            
+           echo "<option value='$cat_id'>{$cat_title}</option>";
         }
 
 ?>
@@ -81,34 +68,34 @@
       </div>
 
 
-       <div class="form-group">
+<!--       <div class="form-group">
        <label for="users">Users</label>
        <select name="post_user" id="">
            
 <?php
 
-        $users_query = "SELECT * FROM users";
-        $select_users = mysqli_query($connection,$users_query);
-        
-        confirmQuery($select_users);
-
-
-        while($row = mysqli_fetch_assoc($select_users)) {
-        $user_id = $row['user_id'];
-        $username = $row['username'];
-            
-            
-            echo "<option value='{$username}'>{$username}</option>";
-         
-            
-        }
+//        $users_query = "SELECT * FROM users";
+//        $select_users = mysqli_query($connection,$users_query);
+//        
+//        confirmQuery($select_users);
+//
+//
+//        while($row = mysqli_fetch_assoc($select_users)) {
+//        $user_id = $row['user_id'];
+//        $username = $row['username'];
+//            
+//            
+//            echo "<option value='{$username}'>{$username}</option>";
+//         
+//            
+//        }
 
 ?>
            
         
        </select>
       
-      </div>
+      </div>-->
 
 
 
@@ -121,13 +108,13 @@
       
       
 
-       <div class="form-group">
+<!--       <div class="form-group">
          <select name="post_status" id="">
              <option value="draft">Post Status</option>
              <option value="published">Published</option>
              <option value="draft">Draft</option>
          </select>
-      </div>
+      </div>-->
       
       
       
