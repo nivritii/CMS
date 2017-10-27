@@ -114,7 +114,11 @@ if(isset($_POST['edit_user'])) {
 
   <h1 class="page-header">
                 Welcome to admin
-                <small>Author</small>
+                <small><?php 
+                            if(isset($_SESSION['username'])) {
+                            echo $_SESSION['username'];
+                            }
+                        ?></small>
             </h1>
             
              <form action="" method="post" enctype="multipart/form-data">    

@@ -47,7 +47,7 @@
             }
 
 
-         if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'subscriber' ) {
+         if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin' ) {
 
 
         $post_query_count = "SELECT * FROM posts";

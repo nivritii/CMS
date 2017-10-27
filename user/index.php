@@ -18,7 +18,7 @@
                        
                        
                         <h1 class="page-header">
-                            Welcome to admin
+                            Welcome to User
                             
                             
                             <small> <?php 

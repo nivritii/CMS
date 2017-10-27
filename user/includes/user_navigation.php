@@ -7,14 +7,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">CMS Admin</a>
+                <a class="navbar-brand" href="index.php">CMS User</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
 
               <!--   <li><a href="">Users Online: <?php //echo users_online(); ?></a></li> -->
 
-                <li><a href="">Users Online: <span class="usersonline"></span></a></li>
+<!--                <li><a href="">Users Online: <span class="usersonline"></span></a></li>-->
 
                <li><a href="../index.php">HOME SITE</a></li>
                
@@ -62,7 +62,7 @@ if(isset($_SESSION['username'])) {
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li>
+<!--                    <li>
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                 
@@ -70,22 +70,21 @@ if(isset($_SESSION['username'])) {
                         <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Posts <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="posts_dropdown" class="collapse">
                             <li>
-                                <a href="./posts.php"> View All Posts</a>
+                                <a href="./posts.php"> View My Campaigns</a>
                             </li>
                             <li>
-                                <a href="posts.php?source=add_post">Add Posts</a>
+                                <a href="posts.php?source=add_post">Create a Campaign</a>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                     <li>
-                        <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
+                        <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i>View My Campaigns</a>
                     </li>
-                   
                     <li class="">
-                        <a href="comments.php"><i class="fa fa-fw fa-file"></i> Comments</a>
+                        <a href="comments.php"><i class="fa fa-fw fa-file"></i>Create a Campaign</a>
                     </li>
                     
-                    <li>
+<!--                    <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
@@ -95,7 +94,7 @@ if(isset($_SESSION['username'])) {
                                 <a href="users.php?source=add_user">Add User</a>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                     
                     <li>
                         <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Profile</a>

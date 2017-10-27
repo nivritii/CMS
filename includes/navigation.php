@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/cms">CMS Front</a>
+                <a class="navbar-brand" href="/cms">Campaign Management System</a>
             </div>
             
             
@@ -32,36 +32,29 @@
                     
     ?>
 
-                    <?php if(isLoggedIn()): ?>
-
-
+                    <?php if(isLoggedInAdmin()): ?>
                         <li>
                             <a href="/cms/admin">Admin</a>
-                        </li>
-
+                        </li>                
                         <li>
                             <a href="/cms/includes/logout.php">Logout</a>
                         </li>
-
-
-                    <?php else: ?>
-
-
+                    <?php elseif(isLoggedInUser()): ?>
+                        <li>
+                            <a href="/cms/user">User</a>
+                        </li>
+                        <li>
+                            <a href="/cms/includes/logout.php">Logout</a>
+                        </li>
+                    <?php else: ?>     
                         <li>
                             <a href="/cms/login.php">Login</a>
                         </li>
-
-
-                    <?php endif; ?>
-
-
-
-
-                                 
-                     <li>
+                        <li>
                         <a href="/cms/registration">Registration</a>
-                    </li>
-                                  
+                        </li>
+                    <?php endif; ?>
+                                
                     
     <?php 
 

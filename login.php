@@ -2,32 +2,32 @@
 <?php  include "includes/header.php"; ?>
 
 
-//<?php
-//
-//		checkIfUserIsLoggedInAndRedirect('/cms/admin');
-//
-//
-//		if(ifItIsMethod('post')){
-//
-//			if(isset($_POST['username']) && isset($_POST['password'])){
-//
-//				login_user($_POST['username'], $_POST['password']);
-//
-//
-//			}else {
-//
-//
-//				redirect('/cms/login.php');
-//			}
-//
-//		}
-//
-//
-//
-//
-//
-//
-//?>
+<?php
+
+		//checkIfUserIsLoggedInAndRedirect('/cms/admin');
+
+
+		if(ifItIsMethod('post')){
+
+			if(isset($_POST['username']) && isset($_POST['password'])){
+
+				login_user($_POST['username'], $_POST['password']);
+
+
+			}else {
+
+
+				redirect('/cms/login.php');
+			}
+
+		}
+
+
+
+
+
+
+?>
 
 
 
@@ -53,7 +53,7 @@
 							<div class="panel-body">
 
 
-                                                            <form id="login-form" role="form" autocomplete="off" class="form" method="post" action="includes/login.php">
+								<form id="login-form" role="form" autocomplete="off" class="form" method="post">
 
 									<div class="form-group">
 										<div class="input-group">

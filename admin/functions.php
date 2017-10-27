@@ -21,16 +21,24 @@ function ifItIsMethod($method=null){
 
 }
 
-function isLoggedIn(){
+function isLoggedInAdmin(){
 
     if(isset($_SESSION['user_role'])){
-
+        
+        if($_SESSION['user_role']=='admin')
         return true;
-
-
     }
+   return false;
 
+}
 
+function isLoggedInUser(){
+
+    if(isset($_SESSION['user_role'])){
+        
+        if($_SESSION['user_role']=='subscriber')
+        return true;
+    }
    return false;
 
 }
@@ -338,9 +346,8 @@ function register_user($username, $email, $password){
         $username = mysqli_real_escape_string($connection, $username);
         $email    = mysqli_real_escape_string($connection, $email);
         $password = mysqli_real_escape_string($connection, $password);
-
-        $password = password_hash( $password, PASSWORD_BCRYPT, array('cost' => 12));
-            
+        
+        $password = password_hash( $password, PASSWORD_BCRYPT, array('cost' => 12));           
             
         $query = "INSERT INTO users (username, user_email, user_password, user_role) ";
         $query .= "VALUES('{$username}','{$email}', '{$password}', 'subscriber' )";
@@ -391,10 +398,10 @@ function register_user($username, $email, $password){
              $_SESSION['firstname'] = $db_user_firstname;
              $_SESSION['lastname'] = $db_user_lastname;
              $_SESSION['user_role'] = $db_user_role;
-
-            if ($db_user_role=='admin'){
+        
+            if($db_user_role=='admin'){
              redirect("/cms/admin");
-            }else{
+            }else {
              redirect("/cms/user");
             }
             
