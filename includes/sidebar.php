@@ -68,7 +68,7 @@
                 </div>
 
                   <div class="input-group">
-                    <input name="password" type="password" class="form-control" placeholder="Enter Password">
+                      <input name="password" type="password"  autocomplete="off" class="form-control" placeholder="Enter Password" autocomplete="off">
                     <span class="input-group-btn">
                        <button class="btn btn-primary" name="login" type="submit">Submit
                        </button>
@@ -104,7 +104,7 @@
                   
         <?php 
         $query = "SELECT * FROM categories";
-        $select_categories_sidebar = mysqli_query($connection,$query);         
+        $select_categories_sidebar = @mysqli_query($connection,$query);         
         ?>
                  <h4>Project Categories</h4>
                     <div class="row">
@@ -113,7 +113,7 @@
                               
                               <?php 
 
-        while($row = mysqli_fetch_assoc($select_categories_sidebar )) {
+        while($row = @mysqli_fetch_assoc($select_categories_sidebar )) {
         $cat_title = $row['cat_title'];
         $cat_id = $row['cat_id'];
 

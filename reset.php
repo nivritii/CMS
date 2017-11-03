@@ -110,14 +110,14 @@ if($stmt = mysqli_prepare($connection, 'SELECT username, user_email, token FROM 
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-user color-blue"></i></span>
-                                            <input id="password" name="password" placeholder="Enter password" class="form-control"  type="password">
+                                            <input id="password" name="password" placeholder="Enter password" class="form-control"  type="password" autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-ok color-blue"></i></span>
-                                            <input id="confirmPassword" name="confirmPassword" placeholder="Confirm password" class="form-control"  type="password">
+                                            <input id="confirmPassword" name="confirmPassword" placeholder="Confirm password" class="form-control"  type="password" autocomplete="off">
                                         </div>
                                     </div>
 

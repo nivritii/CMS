@@ -5,3 +5,19 @@ RewriteRule ^(index|contact|registration)$ $1.php [NC,L]
 RewriteRule ^post/(\d+)$ post.php?p_id=$1 [NC,L]
 
 RewriteRule ^category/(\d+)$ category.php?category=$1 [NC,L]
+
+
+php_value session.cookie_httponly 1
+php_value session.cookie_secure 1
+
+<FilesMatch "\.(css|png|js)$">
+    Header set X-Content-Type-Options nosniff
+</FilesMatch>
+
+
+<IfModule mod_headers.c>
+	Header set Cache-Control "no-cache, no-store, must-revalidate"
+	Header set Pragma "no-cache"
+	Header set Expires 0
+</IfModule>
+

@@ -160,7 +160,7 @@ function confirmQuery($result) {
 
     if(!$result ) {
           
-          die("QUERY FAILED ." . mysqli_error($connection));
+          die("QUERY FAILED ." . @mysqli_error($connection));
    
           
       }
@@ -294,7 +294,7 @@ function username_exists($username){
     global $connection;
 
     $query = "SELECT username FROM users WHERE username = '$username'";
-    $result = mysqli_query($connection, $query);
+    $result = @mysqli_query($connection, $query);
     confirmQuery($result);
 
     if(mysqli_num_rows($result) > 0) {
@@ -321,7 +321,7 @@ function email_exists($email){
 
 
     $query = "SELECT user_email FROM users WHERE user_email = '$email'";
-    $result = mysqli_query($connection, $query);
+    $result = @mysqli_query($connection, $query);
     confirmQuery($result);
 
     if(mysqli_num_rows($result) > 0) {
@@ -369,20 +369,20 @@ function register_user($username, $email, $password){
      $username = trim($username);
      $password = trim($password);
 
-     $username = mysqli_real_escape_string($connection, $username);
-     $password = mysqli_real_escape_string($connection, $password);
+     $username = @mysqli_real_escape_string($connection, $username);
+     $password = @mysqli_real_escape_string($connection, $password);
 
      $query = "SELECT * FROM users WHERE username = '{$username}' ";
-     $select_user_query = mysqli_query($connection, $query);
+     $select_user_query = @mysqli_query($connection, $query);
      if (!$select_user_query) {
 
-         die("QUERY FAILED" . mysqli_error($connection));
+         die("QUERY FAILED" . @mysqli_error($connection));
           
 
      }
 
 
-     while ($row = mysqli_fetch_array($select_user_query)) {
+     while ($row = @mysqli_fetch_array($select_user_query)) {
 
          $db_user_id = $row['user_id'];
          $db_username = $row['username'];

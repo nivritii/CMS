@@ -137,7 +137,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
                         </div>
                          <div class="form-group">
                             <label for="password" class="sr-only">Password</label>
-                            <input type="password" name="password" id="key" class="form-control" placeholder="Password">
+                            <input type="password" name="password" id="key" class="form-control" placeholder="Password" autocomplete="off">
 
                             <p><?php echo isset($error['password']) ? $error['password'] : '' ?></p>
 

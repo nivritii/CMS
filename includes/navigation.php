@@ -21,9 +21,9 @@
                   <?php 
 
     $query = "SELECT * FROM categories LIMIT 3";
-    $select_all_categories_query = mysqli_query($connection,$query);
+    $select_all_categories_query = @mysqli_query($connection,$query);
 
-    while($row = mysqli_fetch_assoc($select_all_categories_query)) {
+    while($row = @mysqli_fetch_assoc($select_all_categories_query)) {
        $cat_title = $row['cat_title'];
        $cat_id = $row['cat_id'];
         

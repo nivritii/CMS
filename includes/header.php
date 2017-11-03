@@ -37,6 +37,11 @@ header('X-Frame-Options: DENY');
 header("X-XSS-Protection: 1");
 header('X-Content-Type-Options: nosniff');
 
+header("Pragma: no-cache");
+header("Cache-Control: no-cache,no-store, must-revalidate");
+header("Set-Cookie: name=value; httpOnly");
+
+
 // **PREVENTING SESSION HIJACKING**
 // Prevents javascript XSS attacks aimed to steal the session ID
 ini_set('session.cookie_httponly', 1);
@@ -47,6 +52,9 @@ ini_set('session.use_only_cookies', 1);
 
 // Uses a secure connection (HTTPS) if possible
 ini_set('session.cookie_secure', 1);
+
+
+
 ?>
 
 <?php

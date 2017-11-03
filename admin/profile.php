@@ -192,7 +192,7 @@ if(isset($_POST['edit_user'])) {
       
       <div class="form-group">
          <label for="post_content">Password</label>
-          <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
+          <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password" autocomplete="off">
       </div>
       
       
