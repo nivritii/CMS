@@ -349,8 +349,8 @@ function register_user($username, $email, $password){
         
         $password = password_hash( $password, PASSWORD_BCRYPT, array('cost' => 12));           
             
-        $query = "INSERT INTO users (username, user_email, user_password, user_role) ";
-        $query .= "VALUES('{$username}','{$email}', '{$password}', 'subscriber' )";
+        $query = "INSERT INTO users (username, user_email, user_password, user_role,user_firstname,user_lastname,user_image,token) ";
+        $query .= "VALUES('{$username}','{$email}', '{$password}', 'subscriber', '' , '', '' , '' )";
         $register_user_query = mysqli_query($connection, $query);
 
         confirmQuery($register_user_query);
@@ -372,12 +372,12 @@ function register_user($username, $email, $password){
      $username = mysqli_real_escape_string($connection, $username);
      $password = mysqli_real_escape_string($connection, $password);
 
-
      $query = "SELECT * FROM users WHERE username = '{$username}' ";
      $select_user_query = mysqli_query($connection, $query);
      if (!$select_user_query) {
 
          die("QUERY FAILED" . mysqli_error($connection));
+          
 
      }
 
@@ -391,7 +391,7 @@ function register_user($username, $email, $password){
          $db_user_lastname = $row['user_lastname'];
          $db_user_role = $row['user_role'];
 
-
+         echo $db_user_password;
          if (password_verify($password,$db_user_password)) {
 
              $_SESSION['username'] = $db_username;

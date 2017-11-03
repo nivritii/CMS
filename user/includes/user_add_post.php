@@ -21,9 +21,9 @@
         move_uploaded_file($post_image_temp, "../images/$post_image" );
        
        
-      $query = "INSERT INTO posts(post_category_id, post_title, post_user, post_date,post_image,post_content,post_tags,post_status) ";
+      $query = "INSERT INTO posts(post_category_id, post_title, post_user, post_date,post_image,post_content,post_tags,post_status,post_author,post_comment_count,post_views_count) ";
              
-      $query .= "VALUES({$post_category_id},'{$post_title}','{$post_user}',now(),'{$post_image}','{$post_content}','{$post_tags}', '{$post_status}') "; 
+      $query .= "VALUES({$post_category_id},'{$post_title}','{$post_user}',now(),'{$post_image}','{$post_content}','{$post_tags}', '{$post_status}', '','',0    ) "; 
              
       $create_post_query = mysqli_query($connection, $query);  
           
